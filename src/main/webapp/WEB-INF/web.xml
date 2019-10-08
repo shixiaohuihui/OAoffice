@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>OAoffice</display-name>
+
+	<servlet>
+		<servlet-name>userServlet</servlet-name>
+		<servlet-class>com.oaoffice.servlet.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userServlet</servlet-name>
+		<url-pattern>/UserServlet.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>userlistServlet</servlet-name>
+		<servlet-class>com.oaoffice.servlet.UserListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userlistServlet</servlet-name>
+		<url-pattern>/UserListServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>calendarServlet</servlet-name>
+		<servlet-class>com.oaoffice.servlet.CalendarServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>calendarServlet</servlet-name>
+		<url-pattern>/CalendarServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>dothingServlet</servlet-name>
+		<servlet-class>com.oaoffice.servlet.DothingServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dothingServlet</servlet-name>
+		<url-pattern>/DothingServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>floderServlet</servlet-name>
+		<servlet-class>com.oaoffice.servlet.FloderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>floderServlet</servlet-name>
+		<url-pattern>/FloderServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>bulletinServlet</servlet-name>
+		<servlet-class>com.oaoffice.servlet.BulletinServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>bulletinServlet</servlet-name>
+		<url-pattern>/BulletinServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>vacateServlet</servlet-name>
+		<servlet-class>com.oaoffice.servlet.VacateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>vacateServlet</servlet-name>
+		<url-pattern>/VacateServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>meetingapplyServlet</servlet-name>
+		<servlet-class>com.oaoffice.servlet.MeetingapplyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>meetingapplyServlet</servlet-name>
+		<url-pattern>/MeetingapplyServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>meetingServlet</servlet-name>
+		<servlet-class>com.oaoffice.servlet.MeetingServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>meetingServlet</servlet-name>
+		<url-pattern>/MeetingServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>meetingRoomServlet</servlet-name>
+		<servlet-class>com.oaoffice.servlet.MeetingRoomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>meetingRoomServlet</servlet-name>
+		<url-pattern>/MeetingRoomServlet.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>deptServlet</servlet-name>
+		<servlet-class>com.oaoffice.servlet.DeptServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deptServlet</servlet-name>
+		<url-pattern>/DeptServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>powerServlet</servlet-name>
+		<servlet-class>com.oaoffice.servlet.PowerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>powerServlet</servlet-name>
+		<url-pattern>/PowerServlet.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 定义文件上传Servlet -->
+	<servlet>
+		<servlet-name>uploadServlet</servlet-name>
+		<servlet-class>com.oaoffice.servlet.UploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>uploadServlet</servlet-name>
+		<url-pattern>/UploadServlet.do</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- 定义乱码过滤器 -->
+	<filter>
+		<filter-name>CharacterFilter</filter-name>
+		<filter-class>com.oaoffice.filter.CharacterFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterFilter</filter-name>
+		<url-pattern>/UserServlet.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CharacterFilter</filter-name>
+		<url-pattern>/CalendarServlet.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CharacterFilter</filter-name>
+		<url-pattern>/DothingServlet.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CharacterFilter</filter-name>
+		<url-pattern>/FloderServlet.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CharacterFilter</filter-name>
+		<url-pattern>/BulletinServlet.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CharacterFilter</filter-name>
+		<url-pattern>/VacateServlet.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CharacterFilter</filter-name>
+		<url-pattern>/MeetingapplyServlet.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CharacterFilter</filter-name>
+		<url-pattern>/MeetingServlet.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CharacterFilter</filter-name>
+		<url-pattern>/MeetingRoomServlet.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CharacterFilter</filter-name>
+		<url-pattern>/DeptServlet.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CharacterFilter</filter-name>
+		<url-pattern>/PowerServlet.do</url-pattern>
+	</filter-mapping>
+
+	<!-- 定义登录过滤器 -->
+	<filter>
+		<filter-name>loginFilter</filter-name>
+		<filter-class>com.oaoffice.filter.loginFilter</filter-class>
+		<!-- <init-param> <param-name>encoding</param-name> <param-value>UTF-8</param-value> 
+			</init-param> -->
+	</filter>
+	<filter-mapping>
+		<filter-name>loginFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- 定义权限过滤器 -->
+	<filter>
+		<filter-name>powerFilter</filter-name>
+		<filter-class>com.oaoffice.filter.powerFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>powerFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
